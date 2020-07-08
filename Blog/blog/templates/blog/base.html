@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html Lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+    content="ie=edge">
+    <title>Assignment-Creation of Webpage</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static  'blog/css/base.css' %}"/>
+    {% block extra_head %}
+    {% endblock %}
+    <style>
+        .h1heading{
+            padding-top:20px;
+            width:70%;
+            margin: auto;
+            font-family: 'Raleway';
+        }
+
+        .filterbuttonrow{
+            width:70%;
+            margin:15px 212px
+        }
+
+        .blogs-page{
+            margin-top: 100px;
+            /* background-image: url(https://img.freepik.com/free-vector/abstract-technology-particle-background_52683-25766.jpg?size=626&ext=jpg); */
+
+        }
+
+        .filterbuttons{
+            background-color: #f2f6ff ;
+            border : 1px solid rgb(3, 156, 245);;
+            padding: 5px 15px;
+            border-radius: 15px;
+            color: rgb(3, 156, 245);
+            font-family: 'Raleway';
+            margin:4px;
+            cursor: pointer;
+        }
+
+        .copy{
+            background-color: #232323;
+            color: white;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            text-align: center;
+            padding: 30px 0px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .groupblog{
+            width:70%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .blog{
+            width:300px;
+            margin:5px;
+            border-radius: 5px;
+            border: 0.5px solid skyblue;
+            height: 400px;
+            display:inline-block;
+            background-color: white;
+            text-decoration: none;
+            box-shadow: 5px rgb(3, 163, 255);
+        }
+
+        .blog-img{
+            width:100%;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            
+        }
+
+        .blog-heading{
+            font-family: 'Raleway' ;
+            text-align:left;
+            margin:5px 0px 5px 0px;
+            padding:0 20px;
+            color: black;
+        }
+
+        .blog-author{
+            font-style:italic;
+            padding-left:20px;
+            display:inline-block;
+            color:rgb(3, 156, 245);
+            margin:5px 0px 0px 0px;
+            font-family: 'Raleway' ;
+            font-size: .9em;
+            font-weight: 500
+        }
+
+        .blog-publish-date{
+            display:inline-block;
+            margin:5px 0px 0px 0px;
+            font-family: 'Raleway' ;
+            font-size: 13px;
+
+        }
+
+        .bottombar{
+            transform: translateY(185PX);
+
+        }
+
+        .blog-para{
+            padding: 0 20px;
+            font-family: 'Raleway' ;
+            font-size: 13px;
+            color:grey;
+            letter-spacing:0.35px;
+            line-height: 1.7;
+        }
+        .container{
+          transform: translateY(150px);
+        }
+        .jumbotron>form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+     
+    </style>
+</head>
+<body style="margin:0px;background-color: #f2f6ff;padding-top: 50px;">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        {% include 'blog/navbar.html' %}
+
+        <!-- {% if user.is_authenticated %}
+            <p> {{ user.get_username }} </p>
+            <p> <a href = "{% url 'logout' %}">Logout</a> </p>
+        {% else %}
+            <p><a href="{% url 'login' %}">Login</a></p>
+        {% endif %} -->
+
+    <div>
+        {% block content %}
+        {% endblock %} 
+        <br/><br/>
+        <div class="bottombar" style="transform: translateY(500px);"> 
+            <p class="copy">© Copyright 2018 Mobirise - All Rights Reserved</p>
+        </div>
+    </div>
+</body>
+</html>

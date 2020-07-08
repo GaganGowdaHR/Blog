@@ -1,0 +1,23 @@
+{% extends 'blog/base.html'%}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class = "jumbotron"style="margin:100px 0px 0px 200px;width:500px">
+        <img src="{{ user.profile.image.url }}" style="height:200px; width:200px;border-radius: 50%;margin-left: 100px;" alt="Profile image"/>
+        <h3 style="font-size: 15px;text-align: center;">
+            <h3 style="color:black;text-decoration: solid;text-size-adjust: 10px;text-align: center;font-family: sans-serif;">{{user.username}}</h3> 
+            <br>
+            <h5 style="font-family: railway sans-serif;font-style:normal;font-weight: bolder;text-align: center;">{{user.profile.bio}}</h5>
+        </h3>
+        
+
+
+    </div>
+
+</div>
+
+
+
+{% endblock %}

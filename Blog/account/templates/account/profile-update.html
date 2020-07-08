@@ -1,0 +1,25 @@
+{% extends 'blog/base.html'%}
+{% load static %}
+
+{% block content %}
+
+<div class="container" style="align-content: center;">
+  <div class="col-6" style="margin-top: 100px;align-content: center;">
+<div class="jumbotron" style="padding-top: 2rem; background-color: #EBF3FF; color: black;align-content: center;">
+
+<form method="POST" enctype="multipart/form-data">
+    <fieldset class="form-group">
+        <h2>Update Your Profile here....</h2>
+        <br>
+        {{profile_form}}
+  
+    </fieldset>
+    {% csrf_token %}
+    <button type="submit" class="btn btn-success">Update</button>
+
+</form>
+
+</div>
+</div>
+</div>
+{% endblock %}

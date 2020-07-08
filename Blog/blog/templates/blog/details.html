@@ -1,0 +1,28 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static  'blog/css/details.css' %}"/>
+{% endblock %}
+
+
+{% block content %}
+
+<div id="main-div"  style="width: 40%;height: 100vh; margin: 50px auto;box-sizing: border-box;">
+
+    <div id="card-created" style="border:1px solid skyblue; border-radius: 5px;">
+        <img class="storyimg"src="{{ post.image.url }}" alt="AWS"/ style="margin-top: 0;">
+        <!-- <p style="background-color: transparent;">{{ post.content | safe }}</p> -->
+        <div  style="width: 100%; padding: 10px;">
+            <h1 style="text-align: left;">
+                {{ post.title }}
+            </h1>
+            <span class="blog-author">Arman Ahmed</span> -->
+            <span class="blog-publish-date">| 05 Jul 2019</span>
+            <p style="background-color: transparent;">{{ post.content | safe }}</p>
+        </div>
+    </div>
+ 
+</div>
+
+{% endblock %}

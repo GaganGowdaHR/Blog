@@ -1,0 +1,32 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+
+
+<div class="blogs-page">
+    <h1 class="h1heading">Trending Posts</h1>
+    <p style="margin:15px 212px;width:70%;font-family: 'Raleway';"><img style="width: 14px;height:14px;"src="https://static.thenounproject.com/png/72961-200.png"/> Filter Category</p>
+    <div class="filterbuttonrow">
+        {% for cat in catagories %}
+            <button class="filterbuttons">{{ cat.name }}</button>
+        {% endfor %}
+        
+    </div>
+
+    <div class="groupblog">
+        {% for post in posts %}
+            <a class="blog" href="{{ post.get_absolute_url }}">
+                <img class="blog-img" src="{{ post.image.url }}" alt="Fresh Graduate Program"/>
+                <h3 class="blog-heading">{{ post.title }}</h3>
+                <p class="blog-author">Arman Ahmed</p>
+                <p class="blog-publish-date">| 05 Jul 2019</p>
+                <p class="blog-para">{{ post.content|truncatechars:100 }}</p>
+             </a>    
+
+        {% endfor %}
+
+    </div>
+<!-- </div> --> -->
+
+{% endblock %}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<!-- <html lang="en"> -->
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> -->
+<body>
+    <h1>Welcome to index from root dir</h1>
+    {% for post in posts %}
+    <div>
+        <a href="{{ post.id }}"><h3>{{ post.title }}</h3></a>
+        <p>{{ post.content|truncatechars:100 }}</p>
+        <hr>
+    </div>
+    {% endfor %}
+</body>
+</html>
